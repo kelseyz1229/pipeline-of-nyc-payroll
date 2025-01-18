@@ -1,0 +1,12 @@
+{
+	"name": "ls_azdatalakestorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://dbstoragenyc.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDQ3QjExRDJGLTZCQjgtNDc5Ri05Q0JBLTIxMDE5N0M0RUU5Nl81NmY3NzViOC0yZmQ1LTQ3ZjUtYmY1Zi0xNzgwNjY3NjkwNDEiDQp9"
+		}
+	}
+}

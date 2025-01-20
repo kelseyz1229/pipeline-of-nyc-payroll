@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "sqlnycdatafactory123"
+		},
+		"ls_azdatalakestorage_accountKey": {
+			"value": ""
+		},
+		"ls_azsqldb_password": {
+			"value": ""
+		},
+		"ls_azdatalakestorage_properties_typeProperties_url": {
+			"value": "https://dbstoragenyc.dfs.core.windows.net/"
+		},
+		"ls_azsqldb_properties_typeProperties_server": {
+			"value": "sqlservernyc.database.windows.net"
+		},
+		"ls_azsqldb_properties_typeProperties_database": {
+			"value": "db_nycpayroll"
+		},
+		"ls_azsqldb_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		}
+	}
+}

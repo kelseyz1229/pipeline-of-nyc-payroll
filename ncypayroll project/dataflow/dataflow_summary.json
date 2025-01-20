@@ -26,6 +26,13 @@
 						"referenceName": "ls_azdatalakestorage",
 						"type": "LinkedServiceReference"
 					}
+				},
+				{
+					"dataset": {
+						"referenceName": "NYC_Payroll_Summary",
+						"type": "DatasetReference"
+					},
+					"name": "NYCPayrollSummary"
 				}
 			],
 			"transformations": [
@@ -108,7 +115,22 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     preCommands: [],",
-				"     postCommands: []) ~> sink"
+				"     postCommands: []) ~> sink",
+				"aggregate1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          FiscalYear as integer,",
+				"          AgencyName as string,",
+				"          TotalPaid as double",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> NYCPayrollSummary"
 			]
 		}
 	}

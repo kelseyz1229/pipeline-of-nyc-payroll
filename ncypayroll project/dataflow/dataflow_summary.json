@@ -21,6 +21,10 @@
 			],
 			"sinks": [
 				{
+					"dataset": {
+						"referenceName": "sink",
+						"type": "DatasetReference"
+					},
 					"name": "sink",
 					"rejectedDataLinkedService": {
 						"referenceName": "ls_azdatalakestorage",

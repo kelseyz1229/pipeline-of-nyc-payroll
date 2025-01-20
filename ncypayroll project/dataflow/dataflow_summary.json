@@ -26,17 +26,6 @@
 						"referenceName": "ls_azdatalakestorage",
 						"type": "LinkedServiceReference"
 					}
-				},
-				{
-					"linkedService": {
-						"referenceName": "ls_azdatalakestorage",
-						"type": "LinkedServiceReference"
-					},
-					"name": "sink1",
-					"rejectedDataLinkedService": {
-						"referenceName": "ls_azdatalakestorage",
-						"type": "LinkedServiceReference"
-					}
 				}
 			],
 			"transformations": [
@@ -119,22 +108,7 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     preCommands: [],",
-				"     postCommands: []) ~> sink",
-				"aggregate1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     format: 'delimited',",
-				"     fileSystem: 'adlsnycpayroll-kelsey-z',",
-				"     folderPath: 'dirstaging',",
-				"     columnDelimiter: ',',",
-				"     escapeChar: '\\\\',",
-				"     quoteChar: '\\\"',",
-				"     columnNamesAsHeader: false,",
-				"     umask: 0022,",
-				"     preCommands: [],",
-				"     postCommands: [],",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true,",
-				"     saveOrder: 1) ~> sink1"
+				"     postCommands: []) ~> sink"
 			]
 		}
 	}
